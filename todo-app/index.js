@@ -13,15 +13,14 @@ function addTodo(text) {
 
 function renderTodo() {
   let temp = "";
-  todos.forEach((todo) => {
+  for (const todo of todos) {
     const html = `
         <li key="${todo.id}">
             <span>${todo.text}</span>
         </li>
         `;
     temp += html;
-  });
-
+  }
   list.innerHTML = temp;
 }
 
